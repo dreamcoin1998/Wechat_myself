@@ -38,20 +38,20 @@ Page({
   },
 
   testNetwork: function(event){
-    var data = 'undefined'
+    //var data = 'undefined'
     wx.request({
       url: 'http://www.imooc.com',
       method: 'GET',
       header: {},
       success: function(res){
-        console.log(' in success')
-        data = res.data
+        console.log(res)
+        //data = res.data
       },
       fail: function(res){
         console.log('request failed.')
       }
     })
-    console.log('data:', data)//先执行这句，再执行第30行，因为异步特性，http请求得到响应request才会继续执行，会先执行下面的   
+    //console.log('data:', data)//先执行这句，再执行第30行，因为异步特性，http请求得到响应request才会继续执行，会先执行下面的   
   },
   tapName: function(event){
     console.log(' in tabName function')
